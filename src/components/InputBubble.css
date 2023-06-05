@@ -7,7 +7,7 @@
   border-color: #ff004f;
   background-color: #fffde5;
   overflow-wrap: break-word;
-  white-space: pre;
+  white-space: pre-wrap;
   width: fit-content;
   min-height: 1.9em;
   max-width: 15em;
