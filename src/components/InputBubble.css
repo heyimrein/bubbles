@@ -1,0 +1,19 @@
+.input-bubble {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 2.25em;
+  font-family: "Signika", serif;
+  color: #222034;
+  border-color: #ff004f;
+  background-color: #fffde5;
+  overflow-wrap: break-word;
+  width: fit-content;
+  min-height: 1.9em;
+  max-width: 15em;
+  padding: 0.125em 0.5em;
+  margin: 0 1em;
+}
+
+.current {
+  margin-bottom: 1em;
+}

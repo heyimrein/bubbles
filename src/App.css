@@ -1,0 +1,8 @@
+.app-wrapper {
+  min-height: 100vh;
+}
+
+.input-field {
+  position: absolute;
+  translate: -100rem;
+}
