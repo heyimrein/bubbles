@@ -1,6 +1,6 @@
 ## [bubbles.rein.run](https://bubbles.rein.run)
 # 🫧bubbles🫧
-Live Text-Bubble generator with chrome-key friendly background!
+Live Text-Bubble generator with chroma-key friendly background!
 
 - No opacity-based animation (for easier chroma-key process)
 - Minimalist design
