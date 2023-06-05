@@ -7,6 +7,8 @@ export function InputBubble(props: {
   idx: number;
   removeBubble: () => void;
   isLast: boolean;
+  removing: boolean;
+  startRemoving: () => void;
 }) {
   const [hide, setHide] = useState(false);
 
@@ -18,15 +20,24 @@ export function InputBubble(props: {
       setHide(true);
       const timeout = setTimeout(props.removeBubble, 100);
       return () => clearTimeout(timeout);
-    } else if (props.isLast && props.idx !== 0) {
-      let newTimeout = 0;
+    } else if (props.isLast && !isCurrent && !props.removing) {
       const timeout = setTimeout(() => {
-        setHide(true);
-        newTimeout = setTimeout(props.removeBubble, 100);
-      }, 5000);
+        props.startRemoving();
+      }, 4000);
       return () => {
         clearTimeout(timeout);
-        clearTimeout(newTimeout);
+      };
+    } else if (props.removing && props.isLast && !isCurrent) {
+      let finalTimeout = 0;
+      const timeout = setTimeout(() => {
+        setHide(true);
+        finalTimeout = setTimeout(() => {
+          props.removeBubble();
+        }, 100);
+      }, 1000);
+      return () => {
+        clearTimeout(timeout);
+        clearTimeout(finalTimeout);
       };
     }
   }, [props.removeBubble, props.idx]);

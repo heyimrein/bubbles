@@ -11,6 +11,7 @@ function App() {
   const [count, setCount] = useState(1);
   const [text, setText] = useState("");
   const [bubbles, setBubbles] = useState<Bubble[]>([{ key: 0, text }]);
+  const [removing, setRemoving] = useState(false);
 
   const renderBubble = (bubble: Bubble, idx: number) => {
     const isCurrent = idx === 0;
@@ -21,6 +22,8 @@ function App() {
           idx={idx}
           removeBubble={removeBubble}
           isLast={idx === bubbles.length - 1}
+          removing={removing}
+          startRemoving={() => setRemoving(true)}
         />
       </Fragment>
     );
@@ -39,6 +42,7 @@ function App() {
     const newBubbles = Object.assign([], bubbles);
     newBubbles.pop();
     setBubbles(newBubbles);
+    if (newBubbles.length <= 1) setRemoving(false);
   };
 
   return (
