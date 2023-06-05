@@ -1,5 +1,5 @@
-# [bubbles.rein.run](https://bubbles.rein.run)
-## 🫧bubbles🫧
+## [bubbles.rein.run](https://bubbles.rein.run)
+# 🫧bubbles🫧
 Live Text-Bubble generator with chrome-key friendly background!
 
 - No opacity-based animation (for easier chroma-key process)
@@ -7,6 +7,9 @@ Live Text-Bubble generator with chrome-key friendly background!
 
 ![preview](./assets/text-bubbles-finished.gif)
 
-# How to Use ⌨️
-- Go to https://bubbles.rein.run (or clone the repo and serve it locally) and just start typing!
-- You can capture the window in OBS or other video-capturing software, and chroma-key out the background to create a minimal, elegant replacement for voice commentary
+# ⌨️How to Use⌨️
+- Go to [bubbles.rein.run](https://bubbles.rein.run) (or clone the repo and serve it locally) and just start typing!
+- You can capture the window in OBS or other video-capturing software, and chroma-key the background to create a minimal, elegant replacement for voice commentary
+
+# ✨Special Thanks✨
+- Project inspired by [craftzdog](https://github.com/craftzdog/chat-bubbles-for-yt)
