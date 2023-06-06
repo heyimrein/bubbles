@@ -30,11 +30,19 @@ function App() {
   };
 
   const addBubble = () => {
-    const newBubbles = Object.assign([], bubbles);
-    newBubbles.splice(1, 0, { key: count, text });
-    newBubbles.splice(0, 1, { key: count + 1, text: "" });
-    setBubbles(newBubbles);
-    setCount(count + 2);
+    if (text !== ":cls" && text !== ":clear") {
+      const newBubbles = Object.assign([], bubbles);
+      newBubbles.splice(1, 0, { key: count, text });
+      newBubbles.splice(0, 1, { key: count + 1, text: "" });
+      setBubbles(newBubbles);
+      setCount(count + 2);
+    } else {
+      const newBubbles = structuredClone(bubbles); // I know, only use of `structuredClone`, will fix the rest later
+      for (let i = 0; i < bubbles.length - 1; i++) {
+        newBubbles.pop();
+      }
+      setBubbles(newBubbles);
+    }
     setText("");
   };
 
