@@ -43,6 +43,7 @@ function App() {
       }
       setBubbles(newBubbles);
     }
+    setRemoving(false);
     setText("");
   };
 
